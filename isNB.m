@@ -1,4 +1,3 @@
-[isReplaceable,Replacing_NTseq]=isNB(Trajectory_nucleo(generation-1,ms_nucleotide:ms_nucleotide+2),alpha);
 function [isReplaceable,Replacing_NTseq]=isNB(CurrentNucleo,SubsAmino)
 Replacing_NTseq=CurrentNucleo;
 if SubsAmino == 1
