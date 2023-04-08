@@ -1,4 +1,4 @@
-function [h,familycouplings,align]=completeDCA(inputfile,outputfile,stype)
+function [h,e,align]=completeDCA(inputfile,outputfile,stype)
 %
 % Direct Coupling Analysis (DCA)
 %
@@ -89,7 +89,7 @@ function [h,familycouplings,align]=completeDCA(inputfile,outputfile,stype)
 
     fp = fopen(outputfile,'w');
 
-    familycouplings=nicematrix(-invC,q);
+    e=nicematrix(-invC,q);
     Pairwisehfield=Compute_Results(Pi,Pij_true, Pi_true, invC, N, q,fp);
     Pairwisehfield=symmetriclocal(Pairwisehfield,N,q);
     [h,~]=averagehfield(Pairwisehfield);
